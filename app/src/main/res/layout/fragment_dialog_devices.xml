@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:id="@+id/connection_layout">
+
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/paired_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Paired Devices"
+        android:textSize="@dimen/_14ssp"
+        android:textColor="@color/black"
+        android:paddingHorizontal="@dimen/_5sdp"/>
+
+    <FrameLayout
+        android:id="@+id/frame1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/paired_title">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_paired_devices"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/device_item"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/no_device_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_18sdp"
+            android:text="No paired devices "
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:visibility="gone"/>
+
+
+    </FrameLayout>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/frame1"
+        android:weightSum="4"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/scan_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Discover Devices"
+            android:textSize="@dimen/_14ssp"
+            android:layout_weight="3"
+            android:textColor="@color/black"
+            android:paddingHorizontal="@dimen/_5sdp"/>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <com.balysv.materialripple.MaterialRippleLayout
+                style="@style/RippleStyleWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/scan_btn"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="scan"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+            </com.balysv.materialripple.MaterialRippleLayout>
+
+            <com.victor.loading.rotate.RotateLoading
+                android:id="@+id/rotateloading"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:loading_width="3dp"
+                app:loading_color="@android:color/black"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_scan_devices"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line1"
+        app:layout_constraintHeight_percent="0.4"
+        tools:listitem="@layout/device_item"/>
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

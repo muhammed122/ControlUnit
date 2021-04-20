@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Hand Made</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home_title">HOME</string>
+    <string name="main_title">M A I N</string>
+    <string name="control_title">C O N T R O L</string>
+    <string name="audio_title">A U D I O</string>
+    <string name="connect">CONN..</string>
+    <string name="voice_cmd">VOICE COMMAND</string>
+    <string name="shutdown">SHUTDOWN</string>
+    <string name="f_light">F.LIGHT</string>
+    <string name="b_light">B.LIGHT</string>
+    <string name="spray">SPRAY</string>
+    <string name="temp">TEMP</string>
+    <string name="auto">AUTO</string>
+    <string name="s_mode">S.MODE</string>
+    <string name="v_plus">V+</string>
+    <string name="v_minus">V-</string>
+    <string name="mute">MUTE</string>
+    <string name="fb_sound">FB.SOUND</string>
+    <string name="fb_crazy">F.B.CRAZY</string>
+    <string name="fb_tone">FB.TONE</string>
+    <string name="fb_off">FB.OFF</string>
+    <string name="all_off">ALL OFF</string>
+    <string name="especially_yours">ESPECIALLY FOR YOU</string>
+    <string name="press_here">P R E S S  H E R E    F I R S T</string>
+    <string name="handmade">H A N D M A D E</string>
+    <string name="connecting">Connecting..</string>
+    <string name="device_1">Device 1</string>
+    <string name="device_2">Device 2</string>
+</resources>
